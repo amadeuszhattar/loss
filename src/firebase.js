@@ -1,18 +1,24 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDPwS0jqh9tSIl4cR-dNCjhNA0K7R-PmfU",
-  authDomain: "loss-9cb13.firebaseapp.com",
-  databaseURL: "https://loss-9cb13-default-rtdb.firebaseio.com",
-  projectId: "loss-9cb13",
-  storageBucket: "loss-9cb13.appspot.com",
-  messagingSenderId: "844045767505",
-  appId: "1:844045767505:web:688b72f863e334f465f970",
+  apiKey: "AIzaSyAhWtAW1GWoq1_x-xs--ZhH3xDAWInynhc",
+  authDomain: "loss-gg-19261.firebaseapp.com",
+  databaseURL:
+    "https://loss-gg-19261-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "loss-gg-19261",
+  storageBucket: "loss-gg-19261.appspot.com",
+  messagingSenderId: "159496725930",
+  appId: "1:159496725930:web:e5d94f02d02ec84d2f77d3",
 };
 
 // Initialize Firebase
-export default app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Authentication and get a reference to the service
+export const auth = getAuth(app);
+export const storage = getStorage(app);
+export default app;
